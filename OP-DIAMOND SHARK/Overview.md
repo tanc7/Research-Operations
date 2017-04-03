@@ -58,6 +58,37 @@ ASLR may prevent the attacker from reliably injecting into a Android process (Ad
 That means anyone that has Android v.4.0 and up are technically immune. At least to certain aspects.
 Furthermore, stock antivirus software such as Lookout, can make you able to detect exploits taking advantage of Stagefright.
 
+# Metasploit Supports Stagefright Vulnerability
+Only as a link formatted exploit. Not exactly sure how it works, it may be a malicious web URL type of injection. 
+
+exploit/android/browser/stagefright_mp4_tx3g_64bit
+
+Default options:
+
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------
+   SRVHOST  0.0.0.0          yes       The local host to listen on. This must be an address on the local machine or 0.0.0.0
+   SRVPORT  8080             yes       The local port to listen on.
+   SSL      false            no        Negotiate SSL for incoming connections
+   SSLCert                   no        Path to a custom SSL certificate (default is randomly generated)
+   URIPATH                   no        The URI to use for this exploit (default is random)
+
+Advanced options:
+
+   Name                    Current Setting  Required  Description
+   ----                    ---------------  --------  -----------
+   ContextInformationFile                   no        The information file that contains context information
+   DisablePayloadHandler   false            no        Disable the handler code for the selected payload
+   EnableContextEncoding   false            no        Use transient context when encoding payloads
+   ListenerComm                             no        The specific communication channel to use for this service
+   SSLCipher                                no        String for SSL cipher spec - "DHE-RSA-AES256-SHA" or "ADH"
+   SSLCompression          false            no        Enable SSL/TLS-level compression
+   URIHOST                                  no        Host to use in URI (useful for tunnels)
+   URIPORT                                  no        Port to use in URI (useful for tunnels)
+   VERBOSE                 false            no        Enable detailed status messages
+   WORKSPACE                                no        Specify the workspace for this module
+
+
 # 'APK Payload-to-PNG File' Vulnerability
 https://www.blackhat.com/docs/eu-14/materials/eu-14-Apvrille-Hide-Android-Applications-In-Images-wp.pdf
 
