@@ -44,3 +44,4 @@ http://basicstate.com/htm/page.htm # List of many of the possible domains that a
 https://github.com/tanc7/Research-Operations/blob/master/OP-DIAMOND%20SHARK/CellularMMSEmailWordlist.txt # Same thing as a wordlist
 https://www.blackhat.com/docs/eu-14/materials/eu-14-Apvrille-Hide-Android-Applications-In-Images-wp.pdf
 
+http://corkami.googlecode.com/svn/trunk/src/angecryption/angecrypt.py # Former location of APK-to-PNG format crypter
