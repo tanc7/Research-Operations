@@ -88,6 +88,10 @@ Advanced options:
    VERBOSE                 false            no        Enable detailed status messages
    WORKSPACE                                no        Specify the workspace for this module
 
+# Example of Stagefright-Compatible Exploit
+https://github.com/jduck/cve-2015-1538-1
+
+It is a payload generator for a specific Android Device Model
 
 # 'APK Payload-to-PNG File' Vulnerability
 https://www.blackhat.com/docs/eu-14/materials/eu-14-Apvrille-Hide-Android-Applications-In-Images-wp.pdf
