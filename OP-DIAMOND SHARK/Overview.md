@@ -45,3 +45,4 @@ https://github.com/tanc7/Research-Operations/blob/master/OP-DIAMOND%20SHARK/Cell
 https://www.blackhat.com/docs/eu-14/materials/eu-14-Apvrille-Hide-Android-Applications-In-Images-wp.pdf
 
 http://corkami.googlecode.com/svn/trunk/src/angecryption/angecrypt.py # Former location of APK-to-PNG format crypter
+https://github.com/cryptax/angeapk # New Location of APK-to-PNG crypter
