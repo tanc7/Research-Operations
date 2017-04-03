@@ -58,6 +58,16 @@ ASLR may prevent the attacker from reliably injecting into a Android process (Ad
 That means anyone that has Android v.4.0 and up are technically immune. At least to certain aspects.
 Furthermore, stock antivirus software such as Lookout, can make you able to detect exploits taking advantage of Stagefright.
 
+Not true! ASLR bypassed here: https://www.exploit-db.com/exploits/40436/
+Second one here: https://www.exploit-db.com/exploits/39640/
+
+Compatible MP4 Payload Generator Here: https://www.exploit-db.com/exploits/38124/
+Bug fixes for that exploit here: https://null-byte.wonderhowto.com/forum/use-stagefright-exploit-0164488/
+
+Other links here:
+https://www.exploit-db.com/exploits/38226/
+https://www.exploit-db.com/exploits/40436/
+
 # Metasploit Supports Stagefright Vulnerability
 Only as a link formatted exploit. Not exactly sure how it works, it may be a malicious web URL type of injection. 
 
@@ -87,11 +97,19 @@ Advanced options:
    URIPORT                                  no        Port to use in URI (useful for tunnels)
    VERBOSE                 false            no        Enable detailed status messages
    WORKSPACE                                no        Specify the workspace for this module
+   
+Information from the official Rapid7 Metasploit Website, basically any device with SELinux either disabled or in permissive mode:
 
-# Example of Stagefright-Compatible Exploit
+This module exploits a integer overflow vulnerability in the Stagefright Library (libstagefright.so). The vulnerability occurs when parsing specially crafted MP4 files. While a wide variety of remote attack vectors exist, this particular exploit is designed to work within an HTML5 compliant browser. Exploitation is done by supplying a specially crafted MP4 file with two tx3g atoms that, when their sizes are summed, cause an integer overflow when processing the second atom. As a result, a temporary buffer is allocated with insufficient size and a memcpy call leads to a heap overflow. This version of the exploit uses a two-stage information leak based on corrupting the MetaData that the browser reads from mediaserver. This method is based on a technique published in NorthBit's Metaphor paper. First, we use a variant of their technique to read the address of a heap buffer located adjacent to a SampleIterator object as the video HTML element's videoHeight. Next, we read the vtable pointer from an empty Vector within the SampleIterator object using the video element's duration. This gives us a code address that we can use to determine the base address of libstagefright and construct a ROP chain dynamically. NOTE: the mediaserver process on many Android devices (Nexus, for example) is constrained by SELinux and thus cannot use the execve system call. To avoid this problem, the original exploit uses a kernel exploit payload that disables SELinux and spawns a shell as root. Work is underway to make the framework more amenable to these types of situations. Until that work is complete, this exploit will only yield a shell on devices without SELinux or with SELinux in permissive mode.
+
+# Examples of Stagefright-Compatible Exploit
 https://github.com/jduck/cve-2015-1538-1
 
 It is a payload generator for a specific Android Device Model
+
+Another official example here: https://www.exploit-db.com/exploits/38226/
+
+Appears to be a payload generator
 
 # 'APK Payload-to-PNG File' Vulnerability
 https://www.blackhat.com/docs/eu-14/materials/eu-14-Apvrille-Hide-Android-Applications-In-Images-wp.pdf
