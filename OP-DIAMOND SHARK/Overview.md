@@ -46,3 +46,6 @@ https://www.blackhat.com/docs/eu-14/materials/eu-14-Apvrille-Hide-Android-Applic
 
 http://corkami.googlecode.com/svn/trunk/src/angecryption/angecrypt.py # Former location of APK-to-PNG format crypter
 https://github.com/cryptax/angeapk # New Location of APK-to-PNG crypter, usage of this is described on Page #5 of the BlackHat PDF Link
+
+I was Wrong... Apparenty the Cryptax Repo is about the drawing of the images, the actual credit belongs to Ange Albertini. Use the following links below for research notes
+https://blog.fortinet.com/2014/03/31/angecryption-at-insomni-hack # That contains instructions on how to reencrypt what could POSSIBLY be a reverse meterpreter generated as a APK into a payload posing as a PNG image, a file format universally accepted by cellular providers as permissible to send via MMS
