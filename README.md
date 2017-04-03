@@ -45,7 +45,7 @@ Test Parameters and Hypotheses:
   (a) Stage 1 payload Stager: A simple script of some sort that will download a much larger payload (likely a GitHub Repository)
   (b) Stage 2 Crafted Rootkit: Covertly "roots" a Android device in preparation for...
   (c) Stage 3 Fully Self-Contained Reverse Shell + RAT: Enables all of the capabilities as described in OP: Smoke Jaguar.
-4. The original SmartPhone Pentest Framework provided by Georgia Weidmann's Bulb Security has now been deprecated, and now is Dagah Mobile Device Penetration Testing Framework. However, a few remnants of the research remains and is best to start here, which I forked from other Repos: https://github.com/tanc7/MobileApp-Pentest-Cheatsheet. She has also kindly provided to us a torrent file for her original kali 1.09 VM image that may contain the SPF Framework: http://www.mininova.org/tor/13311502/
+4. The original SmartPhone Pentest Framework provided by Georgia Weidmann's Bulb Security has now been deprecated, and now is Dagah Mobile Device Penetration Testing Framework. However, a few remnants of the research remains and is best to start here, which I forked from other Repos: https://github.com/tanc7/MobileApp-Pentest-Cheatsheet. She has also kindly provided to us a torrent file for her original kali 1.06 VM image that may contain the SPF Framework: http://www.mininova.org/tor/13311502/
   (a) In the cheatsheet, it covers both Android and Apple mobile devices
   (b) Confirms the vulnerabilities to test for in Android APK Malware Injection, which AC already incorporates
   (c) Confirms of the SMS/MMS transmission vector for malware. 
