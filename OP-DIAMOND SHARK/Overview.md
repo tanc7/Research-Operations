@@ -17,6 +17,7 @@ All you need to know is:
 4. Whether or not that they are connected to that data plan at the moment of transmission, OR if they are using Wi-Fi
 5. The MMS/Email server that represents that carrier
 
+# The Flaw of Planned Obsolesence and Trendy New Devices
 Furthermore, Cellular Manufacturers have consistently left their customers behind in much needed patch updates for their customers and outdated Android devices. In short, OLDER Android and iPhones should be "easier to hack".
 
 # Objectives
