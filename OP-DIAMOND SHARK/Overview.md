@@ -36,9 +36,13 @@ Furthermore, Cellular Manufacturers have consistently left their customers behin
 
 # 'Stagefright' Vulnerability
 https://www.exploit-db.com/docs/39527.pdf
+
 http://www.pcworld.com/article/2953052/security/most-android-phones-can-be-hacked-with-a-simple-mms-message-or-multimedia-file.html
+
 Researcher: Joshua Drake
+
 Firm: Zimperium
+
 URL: https://www.zimperium.com/
 
 The worst part is that the section I have commented on, "Flaw of Planned Obsolesence and Trendy New Devices", is actually confirmed. Some phones may NEVER see the day tha they are patched
