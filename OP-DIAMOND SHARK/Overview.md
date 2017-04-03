@@ -39,3 +39,6 @@ http://www.pcworld.com/article/2953052/security/most-android-phones-can-be-hacke
 Researcher: Joshua Drake
 Firm: Zimperium
 URL: https://www.zimperium.com/
+
+http://basicstate.com/htm/page.htm # List of many of the possible domains that a phone number could resolve as
+https://github.com/tanc7/Research-Operations/blob/master/OP-DIAMOND%20SHARK/CellularMMSEmailWordlist.txt # Same thing as a wordlist
