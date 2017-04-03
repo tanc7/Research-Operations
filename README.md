@@ -38,7 +38,25 @@ Conclusions:
 # OPERATION DIAMOND SHARK
 
 Purpose: Expand further into the vulnerabilities found within cellular communications network. Operation DS is a offshoot of OP: SJ.
+
+Conclusions:
+
+1. Operation Diamond Shark is a partial success https://github.com/jduck/cve-2015-1538-1
+2. The Command Shell is both active and persistent
+3. Only requires a victim's phone number
+4. On your end it requires the python script on jduck's repo
+5. You need to rename Stagefright_CVE-2015-1538-1_Exploit.py as "mp4.py" and then run it
+6. Parameters is callback IP and callback port and output file. 
+7. Payload size approximately 1.9MB
+8. The payload seems to be able to persist through restarts, remote termination (sessions -K)
+9. Also deleting the text message doesn't do anything
+10. LookOut AV fails to stop it
+11. May require a full factory reset
+12. However the shell is bugged. Probably because of using the default "SPRAY" parameter for memory injection, causing the shell to crash with no effect on victim phone, but a new command shell will spawn anyways.
+13. Given that a exact MMS address can be derived from (1) Phone number and (2) Carrier name list: https://github.com/tanc7/Research-Operations/blob/master/OP-DIAMOND%20SHARK/CellularMMSEmailWordlist.txt it is not hard for anyone to use 
+
 Test Parameters and Hypotheses:
+
 1. Since about a decade ago, it is discovered that you can SMS/MMS text to a Email Address. Not for free though.
 2. In the header of the received Email, your phone number is actually a Email Address, which contains (a) the phone number (b) the mail server of your cellular provider
 3. In Theory, a person skilled in customizing a reverse shell, can create a payload that carries the following elements
