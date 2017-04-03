@@ -38,7 +38,6 @@ Conclusions:
 # OPERATION DIAMOND SHARK
 
 Purpose: Expand further into the vulnerabilities found within cellular communications network. Operation DS is a offshoot of OP: SJ.
-
 Test Parameters and Hypotheses:
 1. Since about a decade ago, it is discovered that you can SMS/MMS text to a Email Address. Not for free though.
 2. In the header of the received Email, your phone number is actually a Email Address, which contains (a) the phone number (b) the mail server of your cellular provider
@@ -46,3 +45,11 @@ Test Parameters and Hypotheses:
   (a) Stage 1 payload Stager: A simple script of some sort that will download a much larger payload (likely a GitHub Repository)
   (b) Stage 2 Crafted Rootkit: Covertly "roots" a Android device in preparation for...
   (c) Stage 3 Fully Self-Contained Reverse Shell + RAT: Enables all of the capabilities as described in OP: Smoke Jaguar.
+4. The original SmartPhone Pentest Framework provided by Georgia Weidmann's Bulb Security has now been deprecated, and now is Dagah Mobile Device Penetration Testing Framework. However, a few remnants of the research remains and is best to start here, which I forked from other Repos: https://github.com/tanc7/MobileApp-Pentest-Cheatsheet. She has also kindly provided to us a torrent file for her original kali 1.09 VM image that may contain the SPF Framework: http://www.mininova.org/tor/13311502/
+  (a) In the cheatsheet, it covers both Android and Apple mobile devices
+  (b) Confirms the vulnerabilities to test for in Android APK Malware Injection, which AC already incorporates
+  (c) Confirms of the SMS/MMS transmission vector for malware. 
+5. It is also known that mobile devices have "IP addresses", but it is a terrible idea to use that for pentesting purposes.
+  (a) The IP address constantly changes due to the availability and proximity of local cell towers. It is the cell tower that leases the unique IP.
+  (b) Within the vicinity of Las Vegas, my mobile tablet has been known to possess five different IP addresses at least. 
+  (c) But we do know, that phone numbers + SMS/MMS + Email MAY represent a static address. Try it, go text yourself to your email address. Say "Hello" or something (but you might get charged for it). 
