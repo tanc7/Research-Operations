@@ -52,6 +52,12 @@ This vulnerability allows remote code execution when...
 2. Receive a modified video file
 3. Or going to embedded media content on a webpage
 
+August 2016 Article on "Stagefright": http://www.androidcentral.com/stagefright
+
+ASLR may prevent the attacker from reliably injecting into a Android process (Address Space Layout Randomization)
+That means anyone that has Android v.4.0 and up are technically immune. At least to certain aspects.
+Furthermore, stock antivirus software such as Lookout, can make you able to detect exploits taking advantage of Stagefright.
+
 # 'APK Payload-to-PNG File' Vulnerability
 https://www.blackhat.com/docs/eu-14/materials/eu-14-Apvrille-Hide-Android-Applications-In-Images-wp.pdf
 
