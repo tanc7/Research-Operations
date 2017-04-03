@@ -34,14 +34,21 @@ Furthermore, Cellular Manufacturers have consistently left their customers behin
 2. The author, CTL, has several Android devices with varying versions, between Android 6.0, 7.0, KitKat, and Lollipop.
 3. We are considering searching for Android Firmware Emulators in order to better simulate real life vulnerabilities
 
-# Resources
+# 'Stagefright' Vulnerability
+https://www.exploit-db.com/docs/39527.pdf
 http://www.pcworld.com/article/2953052/security/most-android-phones-can-be-hacked-with-a-simple-mms-message-or-multimedia-file.html
 Researcher: Joshua Drake
 Firm: Zimperium
 URL: https://www.zimperium.com/
 
-http://basicstate.com/htm/page.htm # List of many of the possible domains that a phone number could resolve as
-https://github.com/tanc7/Research-Operations/blob/master/OP-DIAMOND%20SHARK/CellularMMSEmailWordlist.txt # Same thing as a wordlist
+The worst part is that the section I have commented on, "Flaw of Planned Obsolesence and Trendy New Devices", is actually confirmed. Some phones may NEVER see the day tha they are patched
+
+This vulnerability allows remote code execution when...
+1. You receive a MMS
+2. Receive a modified video file
+3. Or going to embedded media content on a webpage
+
+# 'APK Payload-to-PNG File' Vulnerability
 https://www.blackhat.com/docs/eu-14/materials/eu-14-Apvrille-Hide-Android-Applications-In-Images-wp.pdf
 
 http://corkami.googlecode.com/svn/trunk/src/angecryption/angecrypt.py # Former location of APK-to-PNG format crypter
@@ -51,3 +58,10 @@ I was Wrong... Apparenty the Cryptax Repo is about the drawing of the images, th
 https://blog.fortinet.com/2014/03/31/angecryption-at-insomni-hack # That contains instructions on how to reencrypt what could POSSIBLY be a reverse meterpreter generated as a APK into a payload posing as a PNG image, a file format universally accepted by cellular providers as permissible to send via MMS
 
 These links are merely POCs (Proof of Concepts). A entirely new application must be written for our intended usage. 
+
+
+# Resources
+
+http://basicstate.com/htm/page.htm # List of many of the possible domains that a phone number could resolve as
+https://github.com/tanc7/Research-Operations/blob/master/OP-DIAMOND%20SHARK/CellularMMSEmailWordlist.txt # Same thing as a wordlist
+
