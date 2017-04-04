@@ -16,6 +16,7 @@ This here is a guide on generating metasploit shellcode, including how to includ
 "Page 76 of Grey Hat Python" by Justin Seitz
 
 Explains how to debug shellcode that is crashing, including a neat little python program on how to locate badchars. 
+This requires the installation and use of python 2.7 on Windows in order to use the immunity debugger immlib library. 
 
 # JDuck's Source Code (Python)
 https://github.com/jduck/cve-2015-1538-1
