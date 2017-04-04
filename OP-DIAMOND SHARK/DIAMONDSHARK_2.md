@@ -29,3 +29,10 @@ payload, and tweaking JDuck's exploit to make it work. So this time, running the
 1. Be forewarned that non-rooted devices were discovered to have limited capabilities, as described in OPERATION SMOKE JAGUAR. You cannot GEOLOCATE a victim or do a SMS dump without having the devices rooted first
 2. Furthermore you cannot use the Stagefright listener anymore, remember now that the shellcode is a Meterpreter stager, and it must complete the second stage (the connect-back stage that will be sent by listener machine) or else it'll fail
 3. Its probably not wise to create a INLINE payload, because one delivery vector to the desired MMS exploit is via Email-to-MMS. And we all know that emails have attachment size limits and spam filter limits.
+
+# Proposed Solutions
+
+PS #1. We can overcome the filesize limits by replacing the initial MMS payload with a auto-executing script, that downloads the later stages, which is a idea I took from Skiddie's UAC Duck (see below)
+PS #2. One of the "stages" will be a entire rootkit meant to unlock Android phones. However, different cell manufacturers have different methods of unlocking, and their own anti-tamper mechanisms. There is no generic exploit as far as I can tell.
+PS #3. The second stage carries the Meterpreter Stager payload. It's fairly simple, it will connect back to the listener upgrading it to...
+PS #4. The third stage, the Meterpreter Inline. As long as the rootkit properly went off, then we have full access to the victim smartphone as well as geolocation + SMS dumping + voice recording + webcam spying.
